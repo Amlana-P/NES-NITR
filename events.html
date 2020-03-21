@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet"> 
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Raleway);
+		@import url(http://weloveiconfonts.com/api/?family=entypo);
+		[class*="entypo-"]:before {
+			font-family: 'entypo', sans-serif;
+		}
+
+		[class*="entypo-"] {
+			width: 1em;
+			height: 1em;
+		}
+
+		body {
+			background: #252827;
+			font-family: 'Raleway', sans-serif;
+		}
+
+		a,
+		span,
+		h1,
+		h2,
+		h3,
+		span {
+			text-decoration: none;
+			color: #999;
+		}
+
+		a:hover {
+			color: #777;
+		}
+
+		h1 {
+			font-family: 'Raleway', sans-serif;
+			letter-spacing: 1.5px;
+			color: #999;
+			font-weight: 100;
+			font-size: 2.4em;
+			margin: 0;
+			border-bottom: 1px solid #777;
+			padding-bottom: 0.2em;
+		}
+
+		h2 {
+			font-family: 'Raleway', sans-serif;
+			letter-spacing: 1.5px;
+			color: #999;
+			font-weight: 100;
+			font-size: 1.0em;
+		}
+
+		#content {
+			margin-top: 50px;
+			text-align: center;
+		}
+
+		.timeline {
+			border-left: 0.25em solid #4298c3;
+			background: rgba(255, 255, 255, 0.1);
+			margin: 2em auto;
+			line-height: 1.4em;
+			padding: 1em;
+			padding-left: 3em;
+			list-style: none;
+			text-align: left;
+			margin-left: 10em;
+			margin-right: 3em;
+			border-radius: 0.5em;
+			min-width: 22em;
+		}
+
+		.event {
+			min-width: 20em;
+			width: 100%;
+			vertical-align: middle;
+			box-sizing: border-box;
+			position: relative;
+		}
+
+		.timeline .event:before,
+		.timeline .event:after {
+			position: absolute;
+			display: block;
+			top: 1em;
+		}
+
+		.timeline .event:before {
+			left: -15em;
+			color: rgba(255, 255, 255, 0.8);
+			content: attr(data-date);
+			text-align: right;
+			font-weight: 100;
+			font-size: 0.9em;
+			min-width: 9em;
+		}
+
+		.timeline .event:after {
+			box-shadow: 0 0 0 0.2em #4298c3;
+			left: -3.5em;
+			background: #313534;
+			border-radius: 50%;
+			height: 0.75em;
+			width: 0.75em;
+			content: "";
+		}
+
+		.timeline .event .member-location,
+		.timeline .event .member-parameters {
+			display: none;
+		}
+
+		.timeline .event:last-of-type .member-location,
+		.timeline .event:last-of-type .member-parameters {
+			display: block;
+		}
+
+		.member-infos {
+			padding: 10px;
+			text-align: left;
+			position: relative;
+		}
+
+		.member-infos > h1 {
+			font-weight: bold;
+			font-size: 1.4em;
+		}
+
+		.member-location a:before {
+			margin-right: 5px;
+		}
+
+		.member-location {
+			text-indent: 2px;
+		}
+
+		.follow,
+		.options {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			background: #D3D3D3;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+			box-shadow: 0 2px 0 0 #C0C0C0;
+			border-radius: 3px;
+			display: inline-block;
+		}
+
+		.follow:hover,
+		.options:hover {
+			box-shadow: 0 1px 0 0 #C0C0C0;
+			box-sizing: border-box;
+			vertical-align: bottom;
+			margin-bottom: -1px;
+		}
+
+		.member-socials {
+			display: inline-block;
+			font-weight: bold;
+			vertical-align: bottom;
+			line-height: 8px;
+			float: right;
+		}
+
+		.member-socials li {
+			display: inline-block;
+		}
+
+		.shots-number,
+		.followers {
+			font-weight: normal;
+			display: block;
+			margin-top: 10px;
+			font-size: 0.9em;
+		}
+
+		.member-contact {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+
+		.member-contact li {
+			display: inline-block;
+			margin-left: 10px;
+		}
+
+		.member-shots-number {
+			padding-right: 6px;
+			border-right: 1px solid rgba(0, 0, 0, 0.06);
+			margin-right: 6px;
+			margin-left: 6px;
+		}
+	</style>
+</head>
+<body>
+<div id="content">
+	<h1 style="color: white;">DAY 1</h1>
+	<ul class="timeline">
+		<li class="event" data-date="5:30pm - 7:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Opening Ceremony</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>TIIR Auditorium | 5:30pm - 7:00pm</h2>
+			</div>
+
+		</li>
+		<li id='fader' class="event" data-date="7:00pm - 8:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Guest Talk by Asutosh Shrivastav</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>TIIR Auditorium | 7:00pm - 8:00pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="8:00pm - 9:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Dinner Break</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>8:00pm - 9:00pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="10:00pm - 11:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Fireside Chat</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>SAC Gallery | 10:00pm - 11:00pm</h2>
+			</div>
+		</li>
+	</ul>
+</div>
+<div id="content">
+	<h1 style="color: white;">DAY 2</h1>
+	<ul class="timeline">
+		<li class="event" data-date="8:00am - 9:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Registration for B PLAN</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>8:00am - 9:00pm</h2>
+			</div>
+
+		</li>
+		<li id='fader' class="event" data-date="9:30am - 12:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>B PLAN Pitching Session - 1</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>9:30am - 12:00pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="9:30am - 12:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Design Thinking Workshop - 1</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>9:30am - 12:00pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="12:00pm - 1:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Lunch Break</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>12:00pm - 1:00pm</h2>
+			</div>
+		</li>
+		<li class="event" data-date="1:30pm - 5:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>B PLAN Pitching Session - 2</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>1:30pm - 5:30pm</h2>
+			</div>
+
+		</li>
+		<li id='fader' class="event" data-date="1:00pm -3:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Design Thinking Workshop - 2</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>1:00pm -3:30pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="4:00pm - 6:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Design Thinking Workshop - 3</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>4:00pm - 6:30pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="6:30pm - 7:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Ravi Ranjan Guest Talk</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>6:30pm - 7:30pm</h2>
+			</div>
+		</li>
+		<li class="event" data-date="7:30pm - 9:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Dinner Break</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>7:30pm - 9:00pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="9:00pm - 9:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Crises Management</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>9:00pm - 9:30pm</h2>
+			</div>
+		</li>
+	</ul>
+</div>
+<div id="content">
+	<h1 style="color: white;">DAY 3</h1>
+	<ul class="timeline">
+		<li class="event" data-date="9:00am - 12:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Resolve the Catastrophe</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>9:00am - 12:30pm</h2>
+			</div>
+
+		</li>
+		<li id='fader' class="event" data-date="10:00am - 12:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Design Thinking Workshop - 4</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>10:00am - 12:30pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="12:00pm - 1:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Lunch Break</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>12:00pm - 1:30pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="1:00pm - 4:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Design Pallete</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>1:00pm - 4:00pm</h2>
+			</div>
+		</li>
+		<li id='fader' class="event" data-date="2:00pm - 5:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>IPL Auction</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>2:00pm - 5:00pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="5:30pm - 6:30pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Guest Lecture by Vishal Kumar</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>5:30pm - 6:30pm</h2>
+			</div>
+
+		</li>
+		<li class="event" data-date="5:30pm - 8:00pm">
+			<div class="member-infos">
+				<h1 class='member-title'>Valediction</h1>
+				<h2 class="member-location "><span class='entypo-location'></span>5:30pm - 8:00pm</h2>
+			</div>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2 style="color: white; text-align: center;">Go<a href="./" style=" text-decoration: none;"> Back</a></h2>
+</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$('.member-title').click(function(e) {
+		console.log("Clicked");
+		$(this).next().slideToggle();
+		$(this).next().next().next().slideToggle();
+	})
+
+</script>
+</html>
